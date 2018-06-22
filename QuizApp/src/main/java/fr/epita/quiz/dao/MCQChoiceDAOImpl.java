@@ -10,7 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import fr.epita.quiz.model.MCQChoice;
-
+/**
+ * This method is for loading the question 
+ * @author Roshnee
+ *
+ */
 @Repository
 public class MCQChoiceDAOImpl implements MCQChoiceDAO {
 
@@ -21,6 +25,9 @@ public class MCQChoiceDAOImpl implements MCQChoiceDAO {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	/**
+	 * This method is for loading the question based on the id
+	 */
 
 	@Override
 	public List<MCQChoice> loadQuestion() {
@@ -45,6 +52,9 @@ public class MCQChoiceDAOImpl implements MCQChoiceDAO {
 		return questionList;
 		
 	}
+	/**
+	 * This method is for loading the next questions
+	 */
 
 	@Override
 	public List<MCQChoice> loadNextQuestion(int questionId) {
@@ -67,6 +77,9 @@ public class MCQChoiceDAOImpl implements MCQChoiceDAO {
 		return questionList;
 	}
 
+	/**
+	 * This method is for loading the questions with id.suppose if skip is pressed
+	 */
 	@Override
 	public List<MCQChoice> loadQuestion(int questionId) {
 		Session session = sessionFactory.openSession();

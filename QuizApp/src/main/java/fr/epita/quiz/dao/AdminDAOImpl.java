@@ -7,7 +7,11 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.epita.quiz.model.Admin;
-
+/**
+ * this class is for checking the admin credentials with the database
+ * @author Roshnee
+ *
+ */
 
 public class AdminDAOImpl implements AdminDAO {
 	
@@ -17,7 +21,9 @@ public class AdminDAOImpl implements AdminDAO {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-
+/**
+ * Method is for validating the admin login credentials
+ */
 	@Override
 	public Admin loginAdmin(Admin admin) {
 		Session session = sessionFactory.openSession();

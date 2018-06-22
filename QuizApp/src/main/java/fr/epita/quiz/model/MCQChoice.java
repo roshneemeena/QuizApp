@@ -1,6 +1,8 @@
 package fr.epita.quiz.model;
 
 import javax.persistence.Column;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,6 +11,11 @@ import javax.persistence.Table;
 
 
 import org.hibernate.validator.constraints.NotEmpty;
+/**
+ * Bean class for MCQ questions
+ * @author Roshnee
+ *
+ */
 
 @Entity
 @Table(schema = "quiz_App")

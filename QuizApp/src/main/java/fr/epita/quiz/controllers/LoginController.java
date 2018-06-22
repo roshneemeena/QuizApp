@@ -1,6 +1,7 @@
 package fr.epita.quiz.controllers;
 
 import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +16,19 @@ import fr.epita.quiz.dao.StudentDAOImpl;
 import fr.epita.quiz.model.Students;
 import fr.epita.quiz.services.StudentServiceImpl;
 
+/**
+ * This class is for connecting the student login model and the student login view
+ * @author Roshnee
+ * This class is for connecting the user login model and the  user login model
+ *
+ */
+
 @Controller
 public class LoginController {
 	
-	
+	/**
+	 * This method is used for loading the student login page
+	 */
   @Autowired
   StudentDAOImpl studentService;
   AdminDAOImpl adminService;
@@ -30,6 +40,15 @@ public class LoginController {
     mav.addObject("login", new Students());
     return mav;
   }
+  /**
+   * 
+   * This method is to perform the form action to perform the login validation
+   * 
+   * @param request
+   * @param response
+   * @param student
+   * @return
+   */
   @RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
   public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
   @ModelAttribute("login") Students student) {

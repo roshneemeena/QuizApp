@@ -14,10 +14,17 @@ import fr.epita.quiz.dao.AdminDAOImpl;
 import fr.epita.quiz.dao.StudentDAOImpl;
 import fr.epita.quiz.model.Admin;
 
-
+/**
+ * This class is to connect the admin login view and admin login model
+ * @author sushant
+ *
+ */
 @Controller
 
 public class AdminLoginController {
+	/**
+	 * This class is for loading the admin login page
+	 */
 	
 	@Autowired
 	  
@@ -30,6 +37,14 @@ public class AdminLoginController {
 	    mav.addObject("AdminLogin", new Admin());
 	    return mav;
 	  }
+	  
+	  /**
+	   * This class is for the request by the form to validate the admin login credentials
+	   * @param request
+	   * @param response
+	   * @param admin
+	   * @return
+	   */
 	  @RequestMapping(value = "/AdminLoginProcess", method = RequestMethod.POST)
 	  public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
 	  @ModelAttribute("AdminLogin") Admin admin) {

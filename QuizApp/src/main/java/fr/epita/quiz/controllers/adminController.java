@@ -21,12 +21,18 @@ import fr.epita.quiz.model.Students;
 import fr.epita.quiz.services.MCQServiceImpl;
 import fr.epita.quiz.services.StudentService;
 import fr.epita.quiz.validation.StudentValidation;
-
+/**
+ * controller class for the which connects the admin page view with the admin question insertion model
+ * @author sushant
+ *
+ */
 @Controller
 
 
 public class adminController {
-	
+	/**
+	 * class which loads the jsp page in which the admin can add the questions
+	 */
 	@Autowired
 	  public CreateTestDAOImpl createTest;
 	  
@@ -37,7 +43,9 @@ public class adminController {
 	    return mav;
 	  }
 	  
-	  
+	  /**
+	   * This class is used process the action class given in the form to insert the question into the database.
+	   */
 	  @RequestMapping(value = "/adminProcess", method = RequestMethod.POST)
 	  public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
 	  @ModelAttribute("question") MCQChoice mcqChoice) {

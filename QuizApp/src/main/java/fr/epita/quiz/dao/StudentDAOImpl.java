@@ -11,7 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import fr.epita.quiz.model.Students;
-
+/**
+ * This class is for validating and saving the student details 
+ * @author Roshnee
+ *
+ */
 @Repository
 public class StudentDAOImpl implements StudentDAO{
 	
@@ -21,7 +25,9 @@ public class StudentDAOImpl implements StudentDAO{
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-
+/**
+ * This method is for saving the student details
+ */
 	@Override
 	public void savestudent(Students student) {
 		Session session = sessionFactory.openSession();
@@ -39,7 +45,9 @@ public class StudentDAOImpl implements StudentDAO{
 		}
 		
 	}
-
+/**
+ * This method is for validating the student credentials
+ */
 	@Override
 	public Students loginStudent(Students student) {
 		Session session = sessionFactory.openSession();

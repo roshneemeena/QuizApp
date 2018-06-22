@@ -14,11 +14,22 @@ import fr.epita.quiz.dao.StudentDAOImpl;
 import fr.epita.quiz.model.Students;
 import fr.epita.quiz.services.StudentService;
 import fr.epita.quiz.services.StudentServiceImpl;
+/**
+ * This method is for connect the new user registration model and view
+ * @author Roshnee
+ *
+ */
 
 @Controller
 public class RegistrationController {
   @Autowired
   public StudentDAOImpl studentservice;
+  /**
+   * This method is used to load the registration page
+   * @param request
+   * @param response
+   * @return
+   */
   
   @RequestMapping(value = "/register", method = RequestMethod.GET)
   public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
@@ -27,6 +38,13 @@ public class RegistrationController {
     return mav;
   }
   
+  /**
+   * This is to perform the action in the form to save the details in the database
+   * @param request
+   * @param response
+   * @param student
+   * @return
+   */
   
   @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
   public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,

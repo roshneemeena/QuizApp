@@ -1,6 +1,7 @@
 package fr.epita.quiz.controllers;
 
 import java.util.List;
+
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +28,12 @@ import fr.epita.quiz.services.QuestionService;
 import fr.epita.quiz.services.QuestionServiceImpl;
 import fr.epita.quiz.validation.StudentValidation;
 
+/**
+ * This class is for connecting the quiz module model and view
+ * @author Roshnee
+ *
+ */
+
 @Controller
 public class QuizController {
 
@@ -44,8 +51,16 @@ public class QuizController {
 	@Autowired
 	public void setService(QuestionServiceImpl questionService) {
 		this.questionService = questionService;
-		
 	}
+		
+		
+		/**
+		 * This method is for loading the home page
+		 */
+		
+	
+	
+	
 	
 	@RequestMapping(value = "/load-home-page")
 	public String loadHomePage(Map model){
@@ -53,7 +68,12 @@ public class QuizController {
 	}
 	
 
-	
+	/**
+	 * This method is load the exam page with the first question
+	 * @param model
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/load-exam-page")
 	public String loadExamPage(Map model, HttpServletRequest request){
 		request.removeAttribute("error");
@@ -62,6 +82,8 @@ public class QuizController {
 	
 		return "exam-page";
 	}
+	
+	
 	@RequestMapping(value = "/load-detail-page")
 	public String loadDetailPage(Map model, HttpServletRequest request){
 		request.removeAttribute("error");
@@ -103,7 +125,12 @@ public class QuizController {
 		}
 		return "exam-page";
 	}
-
+/**
+ * This method is for the action which wants to skip a question and go to next question
+ * @param model
+ * @param request
+ * @return
+ */
 	@RequestMapping(value = "/skip-question")
 	public String skipQuestion(Map model, HttpServletRequest request){
 		if(request.getParameter("id") !=null){
@@ -129,7 +156,11 @@ public class QuizController {
 		
 	
 	
-	
+	/**
+	 * This methos is to load the result page
+	 * @param model
+	 * @return
+	 */
 
 	@RequestMapping(value = "/show-result")
 	public String skipQuestion(Map model){
