@@ -12,7 +12,7 @@
 		</script>
 		<td><a href="load-home-page">Logout</a>
 	</head>
-	<body style="background-color: blue;">
+	<body style="background-color: 	#F2ECD4;">
 	<center>
 		<form:form name="examForm" action="process-answer" method="GET" ModelAttribute="questionForm">
 			<br><br>			

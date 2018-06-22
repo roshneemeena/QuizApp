@@ -6,10 +6,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         
         <title>Welcome</title>
-        <h1 align="center" style="color: white;">The Quiz Application</h1>
+        <h1 align="center" style="color: black;">The Quiz Application</h1>
        
     </head>
-    <body style="background-color: blue;">
+    <body style="background-color:#F2ECD4;">
     
         
         <table align="center">

@@ -6,7 +6,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
             <title>Login</title>
         </head>
-        <body style="background-color: blue;">
+        <body style="background-color: 	#F2ECD4;">
             <form:form id="loginForm" modelAttribute="login" action="loginProcess" method="post">
                 <table align="center">
                     <tr>

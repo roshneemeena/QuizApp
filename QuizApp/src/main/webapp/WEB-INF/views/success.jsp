@@ -6,7 +6,7 @@
 <head>
 <title>Welcome</title>
 </head>
-<body style="background-color: blue;">
+<body style="background-color:	#F2ECD4">
 <h1></h1>
 <div>
    <div align="right">

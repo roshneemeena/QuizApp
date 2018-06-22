@@ -5,7 +5,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
             <title>Registration</title>
         </head>
-        <body style="background-color: blue;">
+        <body style="background-color:	#F2ECD4;">
             <form:form id="regForm" modelAttribute="student" action="registerProcess" method="post">
                 <table align="center">
                     <tr>
@@ -37,7 +37,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <form:button id="register" name="register">Register</form:button>
+                            <form:button id="register1" name="register1">Register</form:button>
                         </td>
                     </tr>
                     <tr></tr>
